@@ -1,6 +1,6 @@
 {
   "name": "text-particles.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight JavaScript library for creating text particles",
   "main": "dist/index.js",
   "files": [
