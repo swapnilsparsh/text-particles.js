@@ -24,6 +24,7 @@ class TextParticles {
     y: null,
     isClicked: false,
   };
+  private animationFrame: number | null = null;
 
   constructor(container: HTMLElement, options: TextParticlesOptions) {
     this.options = {
@@ -40,9 +41,15 @@ class TextParticles {
       ...options,
     };
 
+    const existingCanvas = container.querySelector("canvas");
+    if (existingCanvas) {
+      container.removeChild(existingCanvas);
+    }
+
     this.canvas = document.createElement("canvas");
-    this.ctx = this.canvas.getContext("2d")!;
     container.appendChild(this.canvas);
+
+    this.ctx = this.canvas.getContext("2d")!;
 
     this.canvas.width = container.clientWidth;
     this.canvas.height = container.clientHeight;
@@ -92,14 +99,14 @@ class TextParticles {
     }
   }
 
-  private animate(): void {
+  private animate = (): void => {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     for (const particle of this.particles) {
       particle.draw(this.ctx);
       particle.update(this.mouse, this.options);
     }
-    requestAnimationFrame(this.animate.bind(this));
-  }
+    this.animationFrame = requestAnimationFrame(this.animate);
+  };
 
   private addEventListeners(): void {
     this.canvas.addEventListener("mousemove", (event) => {
@@ -135,6 +142,23 @@ class TextParticles {
       this.canvas.height = this.canvas.parentElement!.clientHeight;
       this.init();
     });
+    window.addEventListener("resize", this.resizeHandler);
+  }
+
+  private resizeHandler = (): void => {
+    this.canvas.width = this.canvas.parentElement!.clientWidth;
+    this.canvas.height = this.canvas.parentElement!.clientHeight;
+    this.init();
+  };
+
+  public destroy(): void {
+    if (this.canvas && this.canvas.parentNode) {
+      this.canvas.parentNode.removeChild(this.canvas);
+    }
+    window.removeEventListener("resize", this.resizeHandler);
+    if (this.animationFrame !== null) {
+      cancelAnimationFrame(this.animationFrame);
+    }
   }
 }
 
