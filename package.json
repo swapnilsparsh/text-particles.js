@@ -1,34 +1,37 @@
 {
   "name": "text-particles.js",
   "version": "1.0.1",
-  "description": "A lightweight JavaScript library for creating text particles",
+  "description": "A lightweight TypeScript library for creating text particles",
+  "homepage": "https://github.com/swapnilsparsh/text-particles.js#readme",
   "main": "dist/index.js",
   "files": [
-    "dist/**/*"
+    "dist/",
+    "types/",
+    "README.md",
+    "LICENSE"
   ],
-  "types": "dist/index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/swapnilsparsh/text-particles.js.git"
+    "url": "https://github.com/swapnilsparsh/text-particles.js"
   },
   "keywords": [
     "particles",
     "particle",
     "text",
-    "canvas"
+    "canvas",
+    "front-end"
   ],
   "author": "Swapnil Srivastava",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/swapnilsparsh/text-particles.js.git/issues"
+    "url": "https://github.com/swapnilsparsh/text-particles.js/issues"
   },
   "devDependencies": {
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.5.4",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "@types/node": "^22.1.0",
+    "typescript": "^5.5.4"
   }
 }
