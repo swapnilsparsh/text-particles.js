@@ -1,10 +1,12 @@
 [![](https://img.shields.io/npm/v/text-particles.js.svg)](https://www.npmjs.com/package/text-particles.js) [![ci](https://github.com/swapnilsparsh/text-particles.js/actions/workflows/main.yml/badge.svg)](https://github.com/swapnilsparsh/text-particles,js/actions/workflows/main.yml)
 
+# text-particles.js
 `text-particles.js` is a lightweight TypeScript library for creating dynamic text particle effects using the Canvas API.
 
-![text-particles.js](https://github.com/swapnilsparsh/text-particles.js/assets/6f763c9e-3e99-427f-9fc2-eadff1507fa8)
+![text-particles.js](https://github.com/user-attachments/assets/b620e7d0-50bf-4a42-a69d-8e9525cd1d4c)
 
-## Installation
+# Installation
+
 ```sh
 npm install text-particles.js
 ```
@@ -17,8 +19,8 @@ or
 pnpm add text-particles.js
 ```
 
-## Usage
-### React
+# Usage
+## React
 ```
 import React, { useEffect, useRef } from "react";
 import TextParticles from "text-particles.js";
@@ -47,7 +49,7 @@ const ParticleTextEffect: React.FC = () => {
 export default ParticleTextEffect;
 ```
 
-### Angular
+## Angular
 ```
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import TextParticles from 'text-particles.js';
@@ -71,7 +73,7 @@ export class ParticleTextComponent implements AfterViewInit {
 }
 ```
 
-### Svelte
+## Svelte
 ```
 <script>
   import { onMount } from 'svelte';
@@ -94,7 +96,7 @@ export class ParticleTextComponent implements AfterViewInit {
 </div>
 ```
 
-### Vue.js
+## Vue.js
 ```
 <template>
   <div style="width: 100%; height: 300px;">
@@ -123,7 +125,7 @@ export default defineComponent({
 </script>
 ```
 
-## Options
+# Options
 - TEXT: The text to display.
   > Default is "Text Particles".
 - FONT: Font settings for the text.
@@ -152,5 +154,5 @@ export default defineComponent({
 - INTERACTION_MODE: Interaction mode, either "hover" or "click".
   > Default is "hover".
 
-## LICENSE
+# LICENSE
 This project is licensed under the [MIT License](/LICENSE)
