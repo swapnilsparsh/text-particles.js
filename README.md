@@ -20,7 +20,13 @@ pnpm add text-particles.js
 ```
 
 # Usage
-## React
+<details>
+<summary>
+  <h2>
+  React
+  </h2>
+</summary>
+
 ```
 import React, { useEffect, useRef } from "react";
 import TextParticles from "text-particles.js";
@@ -48,8 +54,15 @@ const ParticleTextEffect: React.FC = () => {
 
 export default ParticleTextEffect;
 ```
+</details>
 
-## Angular
+<details>
+<summary>
+  <h2>
+  Angular
+  </h2>
+</summary>
+  
 ```
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import TextParticles from 'text-particles.js';
@@ -72,8 +85,15 @@ export class ParticleTextComponent implements AfterViewInit {
   }
 }
 ```
+</details>
 
-## Svelte
+<details>
+<summary>
+  <h2>
+  Svelte
+  </h2>
+</summary>
+  
 ```
 <script>
   import { onMount } from 'svelte';
@@ -95,8 +115,15 @@ export class ParticleTextComponent implements AfterViewInit {
   <canvas bind:this={canvas}></canvas>
 </div>
 ```
+</details>
 
-## Vue.js
+<details>
+<summary>
+  <h2>
+  Vue.js
+  </h2>
+</summary>
+  
 ```
 <template>
   <div style="width: 100%; height: 300px;">
@@ -124,35 +151,27 @@ export default defineComponent({
 });
 </script>
 ```
+</details>
 
 # Options
-- TEXT: The text to display.
-  > Default is "Text Particles".
-- FONT: Font settings for the text.
-  - STYLE: Font style (e.g., "bold").
-    > Default is "bold".
-  - SIZE: Font size in pixels.
-    > Default is 50.
-  - FAMILY: Font family.
-    > Default is "Arial, sans-serif".
-- COLOR: The color of the particles.
-  > Default is "#ff4f4f".
-- PARTICLE_SIZE_MIN: Minimum size of the particles.
-  > Default is 1.
-- PARTICLE_SIZE_MAX: Maximum size of the particles.
-  > Default is 3.
-- PARTICLE_SPACING: Spacing between particles.
-  > Default is 3.
-- HOVER_RADIUS: Radius for hover interactions.
-  > Default is 30.
-- CLICK_RADIUS: Radius for click interactions.
-  > Default is 100.
-- REPULSION_STRENGTH: Strength of the repulsion effect.
-  > Default is 30.
-- RETURN_SPEED: Speed at which particles return to their original positions.
-  > Default is 10.
-- INTERACTION_MODE: Interaction mode, either "hover" or "click".
-  > Default is "hover".
+
+| Option                  | Description                                             | Default               |
+|-------------------------|---------------------------------------------------------|-----------------------|
+| `TEXT`                  | The text to display.                                   | "Text Particles"      |
+| `FONT`                  | Font settings for the text.                            |                       |
+| `  STYLE`               | Font style (e.g., "bold").                             | "bold"                |
+| `  SIZE`                | Font size in pixels.                                  | 50                    |
+| `  FAMILY`              | Font family.                                           | "Arial, sans-serif"   |
+| `COLOR`                 | The color of the particles.                            | "#ff4f4f"             |
+| `PARTICLE_SIZE_MIN`     | Minimum size of the particles.                         | 1                     |
+| `PARTICLE_SIZE_MAX`     | Maximum size of the particles.                         | 3                     |
+| `PARTICLE_SPACING`      | Spacing between particles.                             | 3                     |
+| `HOVER_RADIUS`          | Radius for hover interactions.                         | 30                    |
+| `CLICK_RADIUS`          | Radius for click interactions.                         | 100                   |
+| `REPULSION_STRENGTH`    | Strength of the repulsion effect.                      | 30                    |
+| `RETURN_SPEED`          | Speed at which particles return to their original positions. | 10                |
+| `INTERACTION_MODE`      | Interaction mode, either "hover" or "click".           | "hover"               |
+
 
 # LICENSE
 This project is licensed under the [MIT License](/LICENSE)
