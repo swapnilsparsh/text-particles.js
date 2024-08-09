@@ -1,6 +1,6 @@
 {
   "name": "text-particles.js",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A lightweight TypeScript library for creating text particles",
   "homepage": "https://github.com/swapnilsparsh/text-particles.js#readme",
   "main": "dist/index.js",
