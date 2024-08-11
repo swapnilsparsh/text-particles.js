@@ -1,4 +1,6 @@
-[![](https://img.shields.io/npm/v/text-particles.js.svg)](https://www.npmjs.com/package/text-particles.js) [![ci](https://github.com/swapnilsparsh/text-particles.js/actions/workflows/main.yml/badge.svg)](https://github.com/swapnilsparsh/text-particles,js/actions/workflows/main.yml)
+[![](https://img.shields.io/npm/v/text-particles.js.svg)](https://www.npmjs.com/package/text-particles.js) 
+[![ci](https://github.com/swapnilsparsh/text-particles.js/actions/workflows/main.yml/badge.svg)](https://github.com/swapnilsparsh/text-particles,js/actions/workflows/main.yml)
+[![](https://data.jsdelivr.com/v1/package/npm/text-particles.js/badge)](https://www.jsdelivr.com/package/npm/text-particles.js)
 
 # text-particles.js
 `text-particles.js` is a lightweight TypeScript library for creating dynamic text particle effects using the Canvas API.
@@ -17,6 +19,10 @@ yarn add text-particles.js
 or
 ```sh
 pnpm add text-particles.js
+```
+via [CDN](https://www.jsdelivr.com/package/npm/text-particles.js)
+```
+https://cdn.jsdelivr.net/npm/text-particles.js/dist/index.min.js
 ```
 
 # Usage
