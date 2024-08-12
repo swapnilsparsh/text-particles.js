@@ -6,7 +6,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let textParticles = new TextParticles(canvas, {
-  TEXT: "Text Particles",
+  TEXT: "Raiyan",
   FONT: {
     STYLE: "bold",
     SIZE: 50,
