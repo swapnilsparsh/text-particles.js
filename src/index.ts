@@ -18,7 +18,6 @@ export class TextParticles {
     COLOR: "#ff4f4f",
     PARTICLE_SIZE_MIN: 1,
     PARTICLE_SIZE_MAX: 3,
-    PARTICLE_SPACING: 3,
     HOVER_RADIUS: 30,
     CLICK_RADIUS: 100,
     REPULSION_STRENGTH: 30,
@@ -40,7 +39,6 @@ export class TextParticles {
       COLOR?: string;
       PARTICLE_SIZE_MIN?: number;
       PARTICLE_SIZE_MAX?: number;
-      PARTICLE_SPACING?: number;
       HOVER_RADIUS?: number;
       CLICK_RADIUS?: number;
       REPULSION_STRENGTH?: number;
@@ -65,8 +63,6 @@ export class TextParticles {
           options.PARTICLE_SIZE_MIN ?? this.defaultOptions.PARTICLE_SIZE_MIN,
         PARTICLE_SIZE_MAX:
           options.PARTICLE_SIZE_MAX ?? this.defaultOptions.PARTICLE_SIZE_MAX,
-        PARTICLE_SPACING:
-          options.PARTICLE_SPACING ?? this.defaultOptions.PARTICLE_SPACING,
         HOVER_RADIUS: options.HOVER_RADIUS ?? this.defaultOptions.HOVER_RADIUS,
         CLICK_RADIUS: options.CLICK_RADIUS ?? this.defaultOptions.CLICK_RADIUS,
         REPULSION_STRENGTH:
@@ -111,16 +107,8 @@ export class TextParticles {
       this.canvas.height
     );
 
-    for (
-      let y = 0;
-      y < textCoordinates.height;
-      y += this.OPTIONS.PARTICLE_SPACING
-    ) {
-      for (
-        let x = 0;
-        x < textCoordinates.width;
-        x += this.OPTIONS.PARTICLE_SPACING
-      ) {
+    for (let y = 0; y < textCoordinates.height; y += 3) {
+      for (let x = 0; x < textCoordinates.width; x += 3) {
         if (
           textCoordinates.data[y * 4 * textCoordinates.width + x * 4 + 3] > 128
         ) {
@@ -189,8 +177,8 @@ class Particle {
   private angle: number;
 
   constructor(x: number, y: number, private OPTIONS: any, private mouse: any) {
-    this.x = x + (Math.random() - 0.5) * OPTIONS.PARTICLE_SPACING;
-    this.y = y + (Math.random() - 0.5) * OPTIONS.PARTICLE_SPACING;
+    this.x = x + (Math.random() - 0.5) * 3;
+    this.y = y + (Math.random() - 0.5) * 3;
     this.size =
       Math.random() * (OPTIONS.PARTICLE_SIZE_MAX - OPTIONS.PARTICLE_SIZE_MIN) +
       OPTIONS.PARTICLE_SIZE_MIN;
