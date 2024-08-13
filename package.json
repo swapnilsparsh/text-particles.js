@@ -1,6 +1,6 @@
 {
   "name": "text-particles.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A lightweight TypeScript library for creating text particles",
   "homepage": "https://textparticlesjs.vercel.app/",
   "main": "dist/index.js",
