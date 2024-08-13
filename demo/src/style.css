@@ -102,8 +102,7 @@ h1 {
 @media (max-width: 768px) {
 
   ul li:nth-of-type(6),
-  ul li:nth-of-type(7),
-  ul li:nth-of-type(8) {
+  ul li:nth-of-type(7) {
     display: none;
   }
 
