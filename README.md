@@ -171,7 +171,6 @@ export default defineComponent({
 | `COLOR`                 | The color of the particles.                            | "#ff4f4f"             |
 | `PARTICLE_SIZE_MIN`     | Minimum size of the particles.                         | 1                     |
 | `PARTICLE_SIZE_MAX`     | Maximum size of the particles.                         | 3                     |
-| `PARTICLE_SPACING`      | Spacing between particles.                             | 3                     |
 | `HOVER_RADIUS`          | Radius for hover interactions.                         | 30                    |
 | `CLICK_RADIUS`          | Radius for click interactions.                         | 100                   |
 | `REPULSION_STRENGTH`    | Strength of the repulsion effect.                      | 30                    |

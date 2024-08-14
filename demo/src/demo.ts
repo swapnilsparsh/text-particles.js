@@ -15,7 +15,6 @@ let textParticles = new TextParticles(canvas, {
   COLOR: "#ff4f4f",
   PARTICLE_SIZE_MIN: 1,
   PARTICLE_SIZE_MAX: 3,
-  PARTICLE_SPACING: 3,
   HOVER_RADIUS: 30,
   CLICK_RADIUS: 100,
   REPULSION_STRENGTH: 30,
@@ -32,7 +31,6 @@ const options = {
   COLOR: "#ff4f4f",
   PARTICLE_SIZE_MIN: 1,
   PARTICLE_SIZE_MAX: 3,
-  PARTICLE_SPACING: 3,
   HOVER_RADIUS: 30,
   CLICK_RADIUS: 100,
   REPULSION_STRENGTH: 30,
@@ -66,9 +64,6 @@ gui
 gui
   .add(options, "PARTICLE_SIZE_MAX", 0.1, 5)
   .onChange(() => updateTextParticles());
-gui
-  .add(options, "PARTICLE_SPACING", 1, 10)
-  .onChange(() => updateTextParticles());
 gui.add(options, "HOVER_RADIUS", 10, 100).onChange(() => updateTextParticles());
 gui.add(options, "CLICK_RADIUS", 10, 200).onChange(() => updateTextParticles());
 gui
@@ -90,7 +85,6 @@ const updateTextParticles = () => {
     COLOR: options.COLOR,
     PARTICLE_SIZE_MIN: options.PARTICLE_SIZE_MIN,
     PARTICLE_SIZE_MAX: options.PARTICLE_SIZE_MAX,
-    PARTICLE_SPACING: options.PARTICLE_SPACING,
     HOVER_RADIUS: options.HOVER_RADIUS,
     CLICK_RADIUS: options.CLICK_RADIUS,
     REPULSION_STRENGTH: options.REPULSION_STRENGTH,

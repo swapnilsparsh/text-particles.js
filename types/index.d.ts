@@ -12,7 +12,6 @@ declare module "text-particles.js" {
         COLOR?: string;
         PARTICLE_SIZE_MIN?: number;
         PARTICLE_SIZE_MAX?: number;
-        PARTICLE_SPACING?: number;
         HOVER_RADIUS?: number;
         CLICK_RADIUS?: number;
         REPULSION_STRENGTH?: number;
