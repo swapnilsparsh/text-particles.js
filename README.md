@@ -26,13 +26,7 @@ https://cdn.jsdelivr.net/npm/text-particles.js/dist/index.min.js
 ```
 
 # Usage
-<details>
-<summary>
-  <h2>
-  React
-  </h2>
-</summary>
-
+## React
 ```
 import React, { useEffect, useRef } from "react";
 import TextParticles from "text-particles.js";
@@ -60,15 +54,8 @@ const ParticleTextEffect: React.FC = () => {
 
 export default ParticleTextEffect;
 ```
-</details>
 
-<details>
-<summary>
-  <h2>
-  Angular
-  </h2>
-</summary>
-  
+## Angular
 ```
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import TextParticles from 'text-particles.js';
@@ -91,15 +78,8 @@ export class ParticleTextComponent implements AfterViewInit {
   }
 }
 ```
-</details>
 
-<details>
-<summary>
-  <h2>
-  Svelte
-  </h2>
-</summary>
-  
+## Svelte
 ```
 <script>
   import { onMount } from 'svelte';
@@ -121,15 +101,8 @@ export class ParticleTextComponent implements AfterViewInit {
   <canvas bind:this={canvas}></canvas>
 </div>
 ```
-</details>
 
-<details>
-<summary>
-  <h2>
-  Vue.js
-  </h2>
-</summary>
-  
+## Vue.js
 ```
 <template>
   <div style="width: 100%; height: 300px;">
@@ -157,7 +130,6 @@ export default defineComponent({
 });
 </script>
 ```
-</details>
 
 # Options
 
