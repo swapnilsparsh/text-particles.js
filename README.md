@@ -1,4 +1,5 @@
-[![](https://img.shields.io/npm/v/text-particles.js.svg)](https://www.npmjs.com/package/text-particles.js) 
+[![](https://img.shields.io/npm/v/text-particles.js.svg)](https://www.npmjs.com/package/text-particles.js)
+[![npm downloads](https://img.shields.io/npm/dm/text-particles.js?color=blue&label=npm%20downloads)](https://www.npmjs.com/package/text-particles.js)
 [![ci](https://github.com/swapnilsparsh/text-particles.js/actions/workflows/main.yml/badge.svg)](https://github.com/swapnilsparsh/text-particles,js/actions/workflows/main.yml)
 [![](https://data.jsdelivr.com/v1/package/npm/text-particles.js/badge)](https://www.jsdelivr.com/package/npm/text-particles.js)
 
@@ -26,12 +27,45 @@ https://cdn.jsdelivr.net/npm/text-particles.js/dist/index.min.js
 ```
 
 # Usage
-## React
+
+## React/Next.js (Pages Router)
+
 ```
 import React, { useEffect, useRef } from "react";
 import TextParticles from "text-particles.js";
 
 const ParticleTextEffect: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    if (canvasRef.current) {
+      new TextParticles(canvasRef.current, {
+        TEXT: "Your Text Here",
+        FONT: {
+          SIZE: 100,
+        },
+      });
+    }
+  }, []);
+
+  return (
+    <div style={{ width: "100%", height: "300px" }}>
+      <canvas ref={canvasRef}></canvas>
+    </div>
+  );
+};
+
+export default ParticleTextEffect;
+```
+
+## Next.js (App Router)
+
+```
+"use client";
+import { useEffect, useRef } from "react";
+import TextParticles from "text-particles.js";
+
+const ParticleTextEffect = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
